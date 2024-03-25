@@ -1,0 +1,30 @@
+Funcionamiento del archivo .gitignore:
+    Queremos evitar subir el hello.js al repositorio,
+    para ello realizamos lo siguiente:
+    
+    EJM:
+        /src/hello.js
+    
+    Si digamos queremos evitar que se suba una carpeta
+    hacemos lo siguiente:
+
+    EJM:
+        /node_modules
+
+Funcionamiento del archivo package.json:
+    El funcionamiento de este archivo nos sirve para verificar
+    la version que estamos utilizando, osease es el versionado 
+    que estamos realizando en el proyecto
+
+    EJM: si tuvieramos alguna aplicacion que este ya desarrollada
+         y nos piden que modifiquemos/mejoremos esa aplicacion
+         tendriamos que hacer lo siguiente para que se demuestre que
+         estamos dando una actualizacion a esa aplicacion:
+
+        - si es una actualizacion/modificacion, se modifica lo siguiente
+            version: "0.0.0"
+            version: "1.3.1"
+    en otros casos tambien se puede modificar las dependencias, los scripts y hasta las dependencias.
+
+
+    
