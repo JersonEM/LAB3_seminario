@@ -1,0 +1,32 @@
+arrow function: las funciones flecha permiten escribir funciones con una sintaxis diferente,
+    osease permiten simplificar algunas funciones que se escriban.
+    EJM:
+
+        //funcion normal
+        function multiplicar(param1, param2){
+            return param1 *param2
+        }
+        console.log('Funcion "normal:"', multiplicar(2,2))
+
+        //funcion flecha
+        const funcionFlecha = (param1,param2) => param1 * param2
+        console.log('Funcion flecha:', funcionFlecha(2,2))
+
+callback: se trata de una funcion que pasa a otra como si fuera un argumento
+    y se ejecuta despues de que esa funcion haya terminado
+    EJM:
+        //definimos una funcion de recibir mensaje
+        function recibirMensaje(callback){
+            setTimeout(function() {
+                var mensaje = "tienes un mensaje";
+                callback(mensaje);
+            }, 1000);
+        }
+        
+        // funcion de callback
+        function mostrarNotificacion(mensaje){
+            alert(mensaje);
+        }
+        
+        //llamada de la funcion
+        recibirMensaje(mostrarNotificacion);
