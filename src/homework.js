@@ -1,3 +1,5 @@
+const { getRouteRegex } = require("next/dist/shared/lib/router/utils/route-regex");
+
 (() => {
 
   /* Excercises */
@@ -12,6 +14,9 @@
 
   /* First excercise */
 
+  let multiplicacion = numbers * 5;
+  document.write("la multiplicacion es: " + multiplicacion);
+
   /* Second excercise */
 
   let names = ["Jhosep", "Daniel", "Rodrigo", "Veronica"];
@@ -22,6 +27,9 @@
 
   /* Second excercise */
 
+  const arreglo = names.sort();
+  console.log(arreglo);
+
   /* Thrid excercise */
 
   const data = ['a', 'b', 'z', 'r', 'a', 'c', 'r', 'a'];
@@ -30,6 +38,19 @@
   /* Resultado esperado: ['a', 'b', 'z', 'r', 'c'] */
 
   /* Thrid excercise */
+
+  const orden = data.sort();
+  console.log(orden);
+  let arregloUnico = [];
+
+  for (let i = 0; i < orden.length; i++){
+    if(arregloUnico.includes(orden[i])){
+      console.log("se repite: " + orden[i]);
+    }else{
+      arregloUnico.push(orden[i])
+    }
+  }
+  console.log(arregloUnico);
 
   /* Fourth excercise */
 
@@ -50,5 +71,24 @@
   */
 
   /* Fourth excercise */
+  function letraRepetida(texto){
+    var contarLetra = 1;
+    var letraUnica = [];
+    var repetidasAlmacenadas = [];
 
+    texto = texto.toUpperCase().split("").sort();
+
+    for(let i = 0; i < texto.length; i++){
+      if(texto[i + 1] === texto[i]){
+        contarLetra++;
+      }else{
+        letraUnica.push(texto[i]);
+        repetidasAlmacenadas.push(contarLetra);
+        contarLetra + 1;
+      }
+    }
+    console.log(texto[i] + " = " + repetidasAlmacenadas);
+  }
+
+  letraRepetida(largeWord);
 })();
